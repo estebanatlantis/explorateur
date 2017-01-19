@@ -1,3 +1,10 @@
+body {
+
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;    
+}
+
 .retour {
 text-align: center;
 width: 40px;
@@ -6,18 +13,16 @@ margin-top:5px;
 
 }
 .contenu {
-position: absolute;
+/*position: absolute;*/
 border: 1px solid black;
 width: 600px;
 height: 600px;
-
 
 }
 .bordure {
 border-bottom: 1px solid black;
 height: -0px;
-
-
+    
 }
 .suivant{
 width: 40px;
@@ -26,7 +31,7 @@ margin-top:5px;
 
 }
 .tous {
-margin-left: 600px;
+margin-left: 500px;
 
 }
 .rechercher {
@@ -35,8 +40,9 @@ margin-left: 600px;
 display: flex;
 justify-content: space-between;
 border-bottom: 1px solid black;
-background-color: white;
+background-color: #0133FE;
 }
 .d1 {
 color: Black;
 }
+
