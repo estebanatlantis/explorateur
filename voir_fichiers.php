@@ -11,8 +11,8 @@
     <div class="contenu">
         <div class="div1">
             <div class="fleche">
-                    <input type="image" src="240_F_18101134_zVd7Mlj23v2OXmHmcEHjgxxq3gyhtdXj.png" name="retour "class="retour">
-                    <input type="image" src="2.png" name="suivant "class="suivant">
+                    <a  src="240_F_18101134_zVd7Mlj23v2OXmHmcEHjgxxq3gyhtdXj.png" href="javascript:history.go(-1)"><img src="240_F_18101134_zVd7Mlj23v2OXmHmcEHjgxxq3gyhtdXj.png" class="retour"></a>
+       <a  href="javascript:history.go(+1)"><img src="2.png" class="suivant">;</a> 
             </div>
         <p class="d1"><i class="fa fa-folder" aria-hidden="true"></i>&#8239 Explorateur de fichier</p>
         <form action="#">
@@ -61,11 +61,11 @@
 	
 	foreach ($dir as $key => $fichier) : //On boucle sur le tableau renvoyé par scandir()
 	
-		if($fichier != "." && $fichier != ".." && $fichier != "index.php") { //On ne veut pas afficher les dossier . et .. ni ce fichier index.php
+		if($fichier != "." && $fichier != ".." && $fichier != "voir_fichiers.php") { //On ne veut pas afficher les dossier . et .. ni ce fichier index.php
 
 			if(is_dir($chemin.$fichier)) { //Si c'est un dossier
 		
-				echo  "<i class='fa fa-folder-open' aria-hidden='true'></i>Dossier : <a href='".$url."?chemin=".$cheminAEnvoyer.$fichier."'>".$fichier."	</a><br>"; //On affiche le nom du dossier avec un lien pour envoyer le chemin du dossier en $_GET
+				echo  "<i class='fa fa-folder-open' aria-hidden='true'></i>Dossier : <a href='".$url."/voir_fichiers.php?chemin=".$cheminAEnvoyer.$fichier."'>".$fichier."	</a><br>"; //On affiche le nom du dossier avec un lien pour envoyer le chemin du dossier en $_GET
 			}
 
 			else if(is_file($chemin.$fichier)) { //Si c'est un fichier
